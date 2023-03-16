@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "TitleComponent": "/components/TitleComponent/TitleComponent"
+  }
+}

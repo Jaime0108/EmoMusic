@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "iconfont";
+  /* Project id 3000004 */
+  src: url('//at.alicdn.com/t/c/font_3000004_8v3lmioewel.woff2?t=1678934228458') format('woff2'), url('//at.alicdn.com/t/c/font_3000004_8v3lmioewel.woff?t=1678934228458') format('woff'), url('//at.alicdn.com/t/c/font_3000004_8v3lmioewel.ttf?t=1678934228458') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-paixingbang:before {
+  content: "\e7bd";
+}
+.icon-diantaizhibo:before {
+  content: "\e65b";
+}
+.icon-airudiantubiaohuizhi-zhuanqu_zhibojian:before {
+  content: "\e69f";
+}
+.icon-24gl-play:before {
+  content: "\ea6d";
+}
+.icon-sousuo:before {
+  content: "\e651";
+}
+.icon-caidan:before {
+  content: "\eaf1";
+}
+.icon-gedan:before {
+  content: "\e637";
+}
+.icon-tuijian:before {
+  content: "\e629";
+}
+.banner-swiper {
+  height: 370rpx;
+}
+.banner-swiper swiper {
+  height: 100%;
+}
+.banner-swiper swiper swiper-item {
+  width: 100%;
+}
+.banner-swiper swiper swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+}
+.nav .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav .nav-item .iconfont {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #ff2b14;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 50rpx;
+  color: #fff;
+  margin: 20rpx 0;
+}
+.nav .nav-item .nav-item-name {
+  font-size: 28rpx;
+}
+.recommend {
+  padding: 0 20rpx;
+}
+.recommend .recommend-scroll-area scroll-view {
+  height: 280rpx;
+  white-space: nowrap;
+}
+.recommend .recommend-scroll-area scroll-view .scroll-item {
+  display: inline-block;
+  width: 200rpx;
+  margin-right: 20rpx;
+}
+.recommend .recommend-scroll-area scroll-view .scroll-item:last-child {
+  margin-right: 0;
+}
+.recommend .recommend-scroll-area scroll-view .scroll-item image {
+  width: 100%;
+  height: 200rpx;
+}
+.recommend .recommend-scroll-area scroll-view .scroll-item text {
+  display: block;
+  white-space: pre-wrap;
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.rank-swiper {
+  padding: 0 20rpx;
+}
+.rank-swiper swiper {
+  height: 400rpx;
+}
+.rank-swiper swiper swiper-item {
+  width: 96%;
+}
+.rank-swiper swiper swiper-item .swiper-item-title {
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.rank-swiper swiper swiper-item .swiper-subitem {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.rank-swiper swiper swiper-item .swiper-subitem image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 6rpx;
+}
+.rank-swiper swiper swiper-item .swiper-subitem .no {
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.rank-swiper swiper swiper-item .swiper-subitem .subitem-title {
+  height: 100rpx;
+  line-height: 100rpx;
+  max-width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

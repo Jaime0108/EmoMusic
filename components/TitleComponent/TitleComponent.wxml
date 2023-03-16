@@ -1,0 +1,9 @@
+<view class="title-text-area">
+    <view class="text-title">
+    {{mainTitle}}
+    </view>
+    <view class="text-container">
+      <text>{{subTitle}}</text>
+      <text class="text-container-more">查看更多</text>
+    </view>
+  </view>

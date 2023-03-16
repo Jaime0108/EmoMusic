@@ -1,0 +1,66 @@
+<view class="banner-swiper">
+    <swiper indicator-dots 
+    indicator-color="#fff"
+    autoplay
+    circular
+    indicator-active-color="rgb(221,78,55)">
+        <swiper-item wx:for="{{bannerList}}" wx:key="bannerId">
+            <image src="{{item.pic}}"/>
+        </swiper-item>
+
+    </swiper>
+</view>
+
+<view class="nav">
+  <view class="nav-item">
+    <text class="iconfont icon-tuijian"></text>
+    <text class="nav-item-name">每日推荐</text>
+  </view>
+  <view class="nav-item">
+    <text class="iconfont icon-gedan"></text>
+    <text class="nav-item-name">歌单</text>
+  </view>
+  <view class="nav-item">
+    <text class="iconfont icon-paixingbang"></text>
+    <text class="nav-item-name">排行榜</text>
+  </view>
+  <view class="nav-item">
+    <text class="iconfont icon-diantaizhibo"></text>
+    <text class="nav-item-name">电台</text>
+  </view>
+  <view class="nav-item">
+    <text class="iconfont icon-airudiantubiaohuizhi-zhuanqu_zhibojian"></text>
+    <text class="nav-item-name">直播</text>
+  </view>
+</view>
+
+<view class="recommend">
+  <TitleComponent mainTitle="推荐歌曲" subTitle="为您精心推荐"></TitleComponent>
+  <view class="recommend-scroll-area">
+    <scroll-view scroll-x="true" show-scrollbar="false"> 
+      <view class="scroll-item" wx:for="{{recommendList}}" wx:key="id">
+        <image src="{{item.picUrl}}" mode=""/>
+        <text class="title">{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+<view class="rank-swiper">
+  <TitleComponent mainTitle="排行榜" subTitle="热歌风向标"></TitleComponent>
+  
+  <swiper next-margin="50rpx" previous-margin="50rpx">
+    <swiper-item wx:for="{{rankList}}" wx:key="id">
+      <view class="swiper-item-title">
+        {{item.name}} >
+      </view>
+      <view class="swiper-subitem">
+        <image src="/static/zj.jpg" mode=""/>
+        <text class="no">1</text>
+        <text class="subitem-title">光辉岁月</text>
+      </view>
+    </swiper-item>
+
+  </swiper>
+</view>
+
