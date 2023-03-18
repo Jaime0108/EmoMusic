@@ -35,9 +35,9 @@
 </view>
 
 <view class="recommend">
-  <TitleComponent mainTitle="推荐歌曲" subTitle="为您精心推荐"></TitleComponent>
+  <TitleComponent mainTitle="推荐歌单" subTitle="为您精心推荐"></TitleComponent>
   <view class="recommend-scroll-area">
-    <scroll-view scroll-x="true" show-scrollbar="false"> 
+    <scroll-view scroll-x="true" enable-flex> 
       <view class="scroll-item" wx:for="{{recommendList}}" wx:key="id">
         <image src="{{item.picUrl}}" mode=""/>
         <text class="title">{{item.name}}</text>
@@ -48,16 +48,15 @@
 
 <view class="rank-swiper">
   <TitleComponent mainTitle="排行榜" subTitle="热歌风向标"></TitleComponent>
-  
   <swiper next-margin="50rpx" previous-margin="50rpx">
     <swiper-item wx:for="{{rankList}}" wx:key="id">
       <view class="swiper-item-title">
         {{item.name}} >
       </view>
-      <view class="swiper-subitem">
-        <image src="/static/zj.jpg" mode=""/>
-        <text class="no">1</text>
-        <text class="subitem-title">光辉岁月</text>
+      <view class="swiper-subitem" wx:for="{{item.musicList}}" wx:for-item="item2" wx:for-index="index2" wx:key="id">
+        <image src="{{item2.al.picUrl}}" mode=""/>
+        <text class="no">{{index2+1}}</text>
+        <text class="subitem-title">{{item2.name}}</text>
       </view>
     </swiper-item>
 

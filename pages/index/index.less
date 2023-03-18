@@ -44,10 +44,12 @@
   .recommend-scroll-area{
       scroll-view{
         height: 280rpx;
-        white-space: nowrap;
+        display: flex;
         .scroll-item{
-          display: inline-block;
+          flex-shrink: 0;
+          flex-grow: 0;
           width: 200rpx;
+          height: 280rpx;
           margin-right: 20rpx;
           &:last-child {
             margin-right: 0;
@@ -77,6 +79,7 @@
     height: 400rpx;
     swiper-item{
       width: 96%;
+      background-color: #eee;
       &:first-child{
       }
       .swiper-item-title{

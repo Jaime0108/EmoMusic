@@ -1,9 +1,8 @@
 @font-face {
-  font-family: "iconfont";
-  /* Project id 3000004 */
-  src: url('//at.alicdn.com/t/c/font_3000004_8v3lmioewel.woff2?t=1678934228458') format('woff2'),
-    url('//at.alicdn.com/t/c/font_3000004_8v3lmioewel.woff?t=1678934228458') format('woff'),
-    url('//at.alicdn.com/t/c/font_3000004_8v3lmioewel.ttf?t=1678934228458') format('truetype');
+  font-family: "iconfont"; /* Project id 3000004 */
+  src: url('//at.alicdn.com/t/c/font_3000004_cvugtifp9yh.woff2?t=1679121967363') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3000004_cvugtifp9yh.woff?t=1679121967363') format('woff'),
+       url('//at.alicdn.com/t/c/font_3000004_cvugtifp9yh.ttf?t=1679121967363') format('truetype');
 }
 
 .iconfont {
@@ -12,6 +11,34 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon_vip_01:before {
+  content: "\e617";
+}
+
+.icon-shouye-shouye:before {
+  content: "\e616";
+}
+
+.icon-gerenzhongxin:before {
+  content: "\e60b";
+}
+
+.icon-shipin-:before {
+  content: "\e631";
+}
+
+.icon-shouye-shouye-selected-copy:before {
+  content: "\eaf2";
+}
+
+.icon-gerenzhongxin-selected-copy:before {
+  content: "\eaf3";
+}
+
+.icon-shipin-selected-copy:before {
+  content: "\eaf4";
 }
 
 .icon-paixingbang:before {

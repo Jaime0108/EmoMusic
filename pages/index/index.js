@@ -10,7 +10,6 @@ Page({
     bannerList:[],
     recommendList:[],
     rankList:[],
-    idxArray:[]
   },
 
   async getBannerList(){
@@ -33,18 +32,53 @@ Page({
     }
   },
 
-  async getRankList(){
-      
-      let res = await promiseRequest('/top/list',{idx})
-      console.log(res);
-      if(res.code == 200){
-        this.setData({
-          rankList: res.playlist
-        })
-      }
+  // 用promise.all同时发送5个请求
+  promiseConcurrent (){
+    let promiseArray = this.createPromiseList()
+    Promise.all(promiseArray).then(res=>{
+      let rankList = []
+      res.forEach(item=>{
+        let rankListObj = {
+          id: item.playlist.id,
+          name: item.playlist.name,
+          musicList: item.playlist.tracks.splice(0,3)
+        }
+        rankList.push(rankListObj)
+      })
+      this.setData({
+        rankList: rankList
+      })
+    }).catch(err=>{
+      console.log(err);
+    })
 
-    
   },
+
+  // 创建5个promise
+  createPromiseList(){
+    let promiseList = []
+    for (let index = 0; index < 5; index++) {
+     let promise =  promiseRequest('/top/list',{idx: index})
+     promiseList.push(promise)
+    }
+    return promiseList
+  },
+
+  // async getRankList(){
+  //     for (let i = 0; i < 5; i++) {
+  //       let {playlist} = await promiseRequest('/top/list',{idx: i})
+  //     // console.log(playlist);
+  //     // console.log(playlist.name);
+  //     // console.log(playlist.tracks);
+  //       let rankListObj = {
+  //         name: playlist.name,
+  //         tracks: playlist.tracks.splice(0, 3)
+  //       }
+  //       this.setData({
+  //         rankList: [...this.data.rankList, rankListObj]
+  //       })
+  //     }
+  // },
 
   // // 生成numberCount个minNumber到maxNumber的随机数
   //  createRandomNumber(numberCount, minNumber, maxNumber){
@@ -66,8 +100,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    Promise.all([this.getBannerList(), this.getRecommendList()])
-    
+    Promise.all([this.getBannerList(), this.getRecommendList(), this.promiseConcurrent()]).then(res=>{
+
+    }).catch(err=>{
+      console.log(err);
+    })
   },
 
   /**

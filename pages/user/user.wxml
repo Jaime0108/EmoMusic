@@ -1,0 +1,23 @@
+<view class="top-area">
+  <image class="backgroundImage" src="/static/user/bgImg2.jpg" mode=""/>
+  <view class="userinfo">
+    <view class="user-avatar">
+      <image src="/static/user/missing-face.png"/>
+    </view>
+    <view class="user-name">游客</view>
+  </view>
+
+  <view class="vip-area">
+    <view class="row1">
+      <view class="left">
+        <text class="iconfont icon-icon_vip_01"></text>
+        <text>Emo云音乐会员</text>
+      </view>
+      <view class="right"></view>
+    </view>
+    <view class="row2"></view>
+    <view class="row3">
+      
+    </view>
+  </view>
+</view>
